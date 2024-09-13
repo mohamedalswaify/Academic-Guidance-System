@@ -1,0 +1,155 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterAdmin.master.cs" Inherits="Academic.MasterAdmin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!--StyleSheet-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Font awesome-->
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <link rel="stylesheet" href="css/styleadmin.css">
+    <style>
+        .dropdown-hover:hover > .dropdown-menu {
+            display: inline-block;
+        }
+
+        .dropdown-hover > .dropdown-toggle:active {
+            /*Without this, clicking will make it sticky*/
+            pointer-events: none;
+        }
+           .Home-Page {
+            font-size: 36px;
+            margin-left: 10px;
+            color: white;
+        }
+
+        .Home-Page:hover {
+            color: #dc3545;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="desh">
+    <!--Start Dashboard-->
+    <div class="div-mobile">
+        <div class="card-header" id="headingOne">
+            <i class="fa-solid fa-bars" data-toggle="collapse" data-target="#show3" aria-expanded="true"
+                aria-controls="collapseOne" style="font-size: 30px; cursor: pointer;"></i>
+        </div>
+
+    </div>
+    <div class="div-desh" id="show3">
+        <div class="general">
+            <img src="../img/Dashboard/Dash.jpg">
+            <h5 class="text-dark" style="letter-spacing: 1px;">وزراة التعليم العالي </h5>
+            <p class="text-dark">المعهد العالي للدراسات المتطورة</p>
+        </div>
+        <hr class="text-success">
+        <div class="div-data">
+            <i class="fa-solid fa-user-tie text-dark pb-2" style="font-size: 40px;"></i>
+            <br>
+            <asp:Label ID="lblID" runat="server" Text="Label"></asp:Label><br>
+            <asp:Label ID="lbljob" runat="server" Text="Label"></asp:Label><br>
+        </div>
+        <hr class="text-success">
+        <div class="div-service">
+            <div class="div-Home">
+                <a href="#aa" data-target="#show" data-toggle="collapse" class="cover">
+                    <div class="div-servece dropdown-toggle">
+                        <i class="fa-brands fa-servicestack"></i>
+                        <span>الخدمات
+                        </span>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+        <div class="div-all-service collapse" aria-expanded="treu" id="show">
+            <a id="page1" href="../PagesAdmin/Page_Admin1.aspx">المقررات</a>
+            <a id="page2" href="../PagesAdmin/Page_Admin2.aspx">الاقسام</a>
+            <a id="page3" href="../PagesAdmin/Page_Admin3.aspx">المستخدمين</a>
+            <a id="page5" href="../PagesAdmin/Page_Admin5.aspx">مواد الطالب</a>
+            <a id="page6" href="../PagesAdmin/Page_Admin6.aspx">درجات الامتحان</a>
+            <a id="page7" href="../PagesAdmin/Page_Admin7.aspx">المواد المتاحة الترم الحالي</a>
+            <a id="page8" href="../PagesAdmin/Page_Admin8.aspx">ساعات المرشد الاكاديمي</a>
+            <a id="page9" href="../PagesAdmin/Page_Admin4.aspx">الترم الحالي</a>
+            <a id="page10" href="../PagesAdmin/Page_Admin10.aspx">لائحة المعهد</a>
+
+        </div>
+        <div class="div-Home mt-1">
+            <a href="#aa" data-target="#show2" data-toggle="collapse" class="cover">
+                <div class="div-servece dropdown-toggle">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>الاعدادت
+                    </span>
+                </div>
+            </a>
+        </div>
+        <div class="div-all-service collapse" id="show2">
+            <a id="page11" href="../PagesAdmin/Page_Admin12.aspx">صلاحيات الطالب</a>
+            <a id="page13" href="../PagesAdmin/Page_Admin13.aspx">صلاحيات المرشد</a>
+            <a id="page14" href="../PagesAdmin/Page_Admin14.aspx">صلاحيات الموظف</a>
+            <a id="page12" href="../PagesAdmin/Page_Admin11.aspx">تعديل كلمة المرور</a>
+        </div>
+        <div class="div-Home mt-1">
+            <a href="#" data-toggle="collapse" class="cover">
+                <div class="div-servece">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>تسجيل خروج
+                    </span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!--End Dashboard-->
+    <!--Start Dashboard Mobile-->
+
+    <!--End Dashboard Mobile-->
+
+
+    <!--start Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-secondary" id="navbar">
+        <div class="container-fluid">
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="d-flex">
+                    <a href="../PagesAdmin/Dashboard_Admin.aspx"><i class="fa fa-home Home-Page" aria-hidden="true"></i></a>                    
+                    <input class="form-control me-2" type="search" placeholder="بحــــث" aria-label="Search">
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!--End Navbar-->
+
+    <div class="div-body" id="body">
+        <div class="div-title shedow">
+            <h4 class="text-dark">نظام الكتروني لقواعد الادرشاد الاكاديمـــي</h4>
+            <p>مرحبــــــــــا بك
+                <asp:Label ID="lblNameEmployee" class="text-success" runat="server" Text="Label"></asp:Label></p>
+        </div>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+
+
+        <script src="../js/popper.min.js"></script>
+        <script src="../js/jquery-3.6.3.min.js"></script>
+        <script src="../js/all.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/js.js"></script>
+</body>
+</html>

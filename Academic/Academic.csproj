@@ -1,0 +1,477 @@
+﻿<Project ToolsVersion="Current" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C822808D-E3D3-4B78-899D-539E0803CC94}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Academic</RootNamespace>
+    <AssemblyName>Academic</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="Telerik.Web.Design">
+      <HintPath>..\lib\RCAJAX\2019.3.1023.45\Telerik.Web.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Web.Spreadsheet">
+      <HintPath>..\lib\RCAJAX\2019.3.1023.45\AdditionalLibraries\Bin45\Telerik.Web.Spreadsheet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Web.UI">
+      <HintPath>..\lib\RCAJAX\2019.3.1023.45\Telerik.Web.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins">
+      <HintPath>..\lib\RCAJAX\2019.3.1023.45\Telerik.Web.UI.Skins.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Core, Version=2019.3.1021.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCAJAX\2019.3.1023.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Flow, Version=2019.3.1021.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCAJAX\2019.3.1023.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Flow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet, Version=2019.3.1021.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCAJAX\2019.3.1023.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Spreadsheet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml, Version=2019.3.1021.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCAJAX\2019.3.1023.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Zip, Version=2019.3.1021.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCAJAX\2019.3.1023.45\AdditionalLibraries\Bin45\Telerik.Windows.Zip.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBconnetion.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginAdmin.aspx.cs">
+      <DependentUpon>LoginAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginAdmin.aspx.designer.cs">
+      <DependentUpon>LoginAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterAdmin.Master.cs">
+      <DependentUpon>MasterAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterAdmin.Master.designer.cs">
+      <DependentUpon>MasterAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterAdvisor.Master.cs">
+      <DependentUpon>MasterAdvisor.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterAdvisor.Master.designer.cs">
+      <DependentUpon>MasterAdvisor.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAdmin\Dashboard_Admin.aspx.cs">
+      <DependentUpon>Dashboard_Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAdmin\Dashboard_Admin.aspx.designer.cs">
+      <DependentUpon>Dashboard_Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAdmin\Page_Admin1.aspx.cs">
+      <DependentUpon>Page_Admin1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAdmin\Page_Admin1.aspx.designer.cs">
+      <DependentUpon>Page_Admin1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAdmin\Page_Admin10.aspx.cs">
+      <DependentUpon>Page_Admin10.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAdmin\Page_Admin10.aspx.designer.cs">
+      <DependentUpon>Page_Admin10.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAdmin\Page_Admin11.aspx.cs">
+      <DependentUpon>Page_Admin11.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAdmin\Page_Admin11.aspx.designer.cs">
+      <DependentUpon>Page_Admin11.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAdmin\Page_Admin12.aspx.cs">
+      <DependentUpon>Page_Admin12.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAdmin\Page_Admin12.aspx.designer.cs">
+      <DependentUpon>Page_Admin12.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAdmin\Page_Admin13.aspx.cs">
+      <DependentUpon>Page_Admin13.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAdmin\Page_Admin13.aspx.designer.cs">
+      <DependentUpon>Page_Admin13.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAdmin\Page_Admin14.aspx.cs">
+      <DependentUpon>Page_Admin14.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAdmin\Page_Admin14.aspx.designer.cs">
+      <DependentUpon>Page_Admin14.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAdmin\Page_Admin2.aspx.cs">
+      <DependentUpon>Page_Admin2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAdmin\Page_Admin2.aspx.designer.cs">
+      <DependentUpon>Page_Admin2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAdmin\Page_Admin3.aspx.cs">
+      <DependentUpon>Page_Admin3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAdmin\Page_Admin3.aspx.designer.cs">
+      <DependentUpon>Page_Admin3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAdmin\Page_Admin4.aspx.cs">
+      <DependentUpon>Page_Admin4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAdmin\Page_Admin4.aspx.designer.cs">
+      <DependentUpon>Page_Admin4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAdmin\Page_Admin5.aspx.cs">
+      <DependentUpon>Page_Admin5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAdmin\Page_Admin5.aspx.designer.cs">
+      <DependentUpon>Page_Admin5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAdmin\Page_Admin6.aspx.cs">
+      <DependentUpon>Page_Admin6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAdmin\Page_Admin6.aspx.designer.cs">
+      <DependentUpon>Page_Admin6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAdmin\Page_Admin7.aspx.cs">
+      <DependentUpon>Page_Admin7.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAdmin\Page_Admin7.aspx.designer.cs">
+      <DependentUpon>Page_Admin7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAdmin\Page_Admin8.aspx.cs">
+      <DependentUpon>Page_Admin8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAdmin\Page_Admin8.aspx.designer.cs">
+      <DependentUpon>Page_Admin8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAdmin\Page_Admin9.aspx.cs">
+      <DependentUpon>Page_Admin9.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAdmin\Page_Admin9.aspx.designer.cs">
+      <DependentUpon>Page_Admin9.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAdvisor\Dashboard_Advisor.aspx.cs">
+      <DependentUpon>Dashboard_Advisor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAdvisor\Dashboard_Advisor.aspx.designer.cs">
+      <DependentUpon>Dashboard_Advisor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAdvisor\Page_Advisor1.aspx.cs">
+      <DependentUpon>Page_Advisor1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAdvisor\Page_Advisor1.aspx.designer.cs">
+      <DependentUpon>Page_Advisor1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAdvisor\Page_Advisor2.aspx.cs">
+      <DependentUpon>Page_Advisor2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAdvisor\Page_Advisor2.aspx.designer.cs">
+      <DependentUpon>Page_Advisor2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAdvisor\Page_Advisor3.aspx.cs">
+      <DependentUpon>Page_Advisor3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAdvisor\Page_Advisor3.aspx.designer.cs">
+      <DependentUpon>Page_Advisor3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesAdvisor\Page_Advisor4.aspx.cs">
+      <DependentUpon>Page_Advisor4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesAdvisor\Page_Advisor4.aspx.designer.cs">
+      <DependentUpon>Page_Advisor4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesStudent\Dashboard_Student.aspx.cs">
+      <DependentUpon>Dashboard_Student.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesStudent\Dashboard_Student.aspx.designer.cs">
+      <DependentUpon>Dashboard_Student.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesStudent\Page_Student1.aspx.cs">
+      <DependentUpon>Page_Student1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesStudent\Page_Student1.aspx.designer.cs">
+      <DependentUpon>Page_Student1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesStudent\Page_Student2.aspx.cs">
+      <DependentUpon>Page_Student2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesStudent\Page_Student2.aspx.designer.cs">
+      <DependentUpon>Page_Student2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesStudent\Page_Student3.aspx.cs">
+      <DependentUpon>Page_Student3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesStudent\Page_Student3.aspx.designer.cs">
+      <DependentUpon>Page_Student3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesStudent\Page_Student4.aspx.cs">
+      <DependentUpon>Page_Student4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesStudent\Page_Student4.aspx.designer.cs">
+      <DependentUpon>Page_Student4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesStudent\Page_Student5.aspx.cs">
+      <DependentUpon>Page_Student5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesStudent\Page_Student5.aspx.designer.cs">
+      <DependentUpon>Page_Student5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesStudent\Page_Student6.aspx.cs">
+      <DependentUpon>Page_Student6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesStudent\Page_Student6.aspx.designer.cs">
+      <DependentUpon>Page_Student6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesStudent\Page_Student7.aspx.cs">
+      <DependentUpon>Page_Student7.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesStudent\Page_Student7.aspx.designer.cs">
+      <DependentUpon>Page_Student7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MasterStudent.Master.cs">
+      <DependentUpon>MasterStudent.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterStudent.Master.designer.cs">
+      <DependentUpon>MasterStudent.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\RadCaptcha\0.wav" />
+    <Content Include="App_Data\RadCaptcha\1.wav" />
+    <Content Include="App_Data\RadCaptcha\2.wav" />
+    <Content Include="App_Data\RadCaptcha\3.wav" />
+    <Content Include="App_Data\RadCaptcha\4.wav" />
+    <Content Include="App_Data\RadCaptcha\5.wav" />
+    <Content Include="App_Data\RadCaptcha\6.wav" />
+    <Content Include="App_Data\RadCaptcha\7.wav" />
+    <Content Include="App_Data\RadCaptcha\8.wav" />
+    <Content Include="App_Data\RadCaptcha\9.wav" />
+    <Content Include="App_Data\RadCaptcha\A.wav" />
+    <Content Include="App_Data\RadCaptcha\B.wav" />
+    <Content Include="App_Data\RadCaptcha\C.wav" />
+    <Content Include="App_Data\RadCaptcha\D.wav" />
+    <Content Include="App_Data\RadCaptcha\E.wav" />
+    <Content Include="App_Data\RadCaptcha\F.wav" />
+    <Content Include="App_Data\RadCaptcha\G.wav" />
+    <Content Include="App_Data\RadCaptcha\H.wav" />
+    <Content Include="App_Data\RadCaptcha\I.wav" />
+    <Content Include="App_Data\RadCaptcha\J.wav" />
+    <Content Include="App_Data\RadCaptcha\K.wav" />
+    <Content Include="App_Data\RadCaptcha\L.wav" />
+    <Content Include="App_Data\RadCaptcha\M.wav" />
+    <Content Include="App_Data\RadCaptcha\N.wav" />
+    <Content Include="App_Data\RadCaptcha\O.wav" />
+    <Content Include="App_Data\RadCaptcha\P.wav" />
+    <Content Include="App_Data\RadCaptcha\Q.wav" />
+    <Content Include="App_Data\RadCaptcha\R.wav" />
+    <Content Include="App_Data\RadCaptcha\S.wav" />
+    <Content Include="App_Data\RadCaptcha\T.wav" />
+    <Content Include="App_Data\RadCaptcha\U.wav" />
+    <Content Include="App_Data\RadCaptcha\V.wav" />
+    <Content Include="App_Data\RadCaptcha\W.wav" />
+    <Content Include="App_Data\RadCaptcha\X.wav" />
+    <Content Include="App_Data\RadCaptcha\Y.wav" />
+    <Content Include="App_Data\RadCaptcha\Z.wav" />
+    <Content Include="css\all.min.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\styleadmin.css" />
+    <Content Include="css\stylertl.css" />
+    <Content Include="css\styleAdvisor.css" />
+    <Content Include="img\Dashboard\Dash.jpg" />
+    <Content Include="img\Dashboard\Doctor.png" />
+    <Content Include="img\Dashboard\Student.png" />
+    <Content Include="img\Login.jpg" />
+    <Content Include="js\all.min.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery-3.6.3.min.js" />
+    <Content Include="js\js.js" />
+    <Content Include="js\popper.min.js" />
+    <Content Include="LoginAdmin.aspx" />
+    <Content Include="PagesAdmin\Dashboard_Admin.aspx" />
+    <Content Include="Default.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\RadSpell\de-DE.tdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\RadSpell\en-US.tdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\RadSpell\fr-FR.tdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PagesAdmin\Page_Admin1.aspx" />
+    <Content Include="PagesAdmin\Page_Admin10.aspx" />
+    <Content Include="PagesAdmin\Page_Admin11.aspx" />
+    <Content Include="PagesAdmin\Page_Admin12.aspx" />
+    <Content Include="PagesAdmin\Page_Admin13.aspx" />
+    <Content Include="PagesAdmin\Page_Admin14.aspx" />
+    <Content Include="PagesAdmin\Page_Admin2.aspx" />
+    <Content Include="PagesAdmin\Page_Admin3.aspx" />
+    <Content Include="PagesAdmin\Page_Admin4.aspx" />
+    <Content Include="PagesAdmin\Page_Admin5.aspx" />
+    <Content Include="PagesAdmin\Page_Admin6.aspx" />
+    <Content Include="PagesAdmin\Page_Admin7.aspx" />
+    <Content Include="PagesAdmin\Page_Admin8.aspx" />
+    <Content Include="PagesAdmin\Page_Admin9.aspx" />
+    <Content Include="PagesAdvisor\Dashboard_Advisor.aspx" />
+    <Content Include="PagesAdvisor\Page_Advisor1.aspx" />
+    <Content Include="PagesAdvisor\Page_Advisor2.aspx" />
+    <Content Include="PagesAdvisor\Page_Advisor3.aspx" />
+    <Content Include="PagesAdvisor\Page_Advisor4.aspx" />
+    <Content Include="PagesStudent\Dashboard_Student.aspx" />
+    <Content Include="PagesStudent\Page_Student1.aspx" />
+    <Content Include="PagesStudent\Page_Student2.aspx" />
+    <Content Include="PagesStudent\Page_Student3.aspx" />
+    <Content Include="PagesStudent\Page_Student4.aspx" />
+    <Content Include="PagesStudent\Page_Student5.aspx" />
+    <Content Include="PagesStudent\Page_Student6.aspx" />
+    <Content Include="PagesStudent\Page_Student7.aspx" />
+    <Content Include="web.config" />
+    <Content Include="MasterStudent.Master" />
+    <Content Include="MasterAdmin.Master" />
+    <Content Include="css\bootstrap.min.css.map" />
+    <Content Include="MasterAdvisor.Master" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <Content Include="webfonts\fa-brands-400.ttf" />
+    <Content Include="webfonts\fa-brands-400.woff2" />
+    <Content Include="webfonts\fa-regular-400.ttf" />
+    <Content Include="webfonts\fa-regular-400.woff2" />
+    <Content Include="webfonts\fa-solid-900.ttf" />
+    <Content Include="webfonts\fa-solid-900.woff2" />
+    <Content Include="webfonts\fa-v4compatibility.ttf" />
+    <Content Include="webfonts\fa-v4compatibility.woff2" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Import Project="$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49573</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49573/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

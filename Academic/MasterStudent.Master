@@ -1,0 +1,147 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterStudent.Master.cs" Inherits="Academic.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!--StyleSheet-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Font awesome-->
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+           .Home-Page {
+            font-size: 36px;
+            margin-left: 10px;
+            color: white;
+        }
+
+        .Home-Page:hover {
+            color: #198754;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="desh">
+    <!--Start Dashboard-->
+    <div class="div-mobile">
+        <div class="card-header" id="headingOne">
+            <i class="fa-solid fa-bars" data-toggle="collapse" data-target="#show3" aria-expanded="true"
+                aria-controls="collapseOne" style="font-size: 30px; cursor: pointer;"></i>
+        </div>
+
+    </div>
+    <div class="div-desh" id="show3">
+        <div class="general">
+            <img src="../img/Dashboard/Dash.jpg">
+            <h5 class="text-dark" style="letter-spacing: 1px;">وزراة التعليم العالي </h5>
+            <p class="text-dark">المعهد العالي للدراسات المتطورة</p>
+        </div>
+        <hr class="text-success">
+        <div class="div-data">
+            <i class="fa-solid fa-user-tie text-dark pb-2" style="font-size: 40px;"></i>
+            <br />
+            <asp:Label ID="lblID" runat="server" Text="Label"></asp:Label><br>
+            <asp:Label ID="lblName" runat="server" Text="Lable2"></asp:Label><br>
+            <h6 class="text-secondary">الفرقة: </h6>
+            <asp:Label ID="lbllevel" runat="server" Text="Lable2"></asp:Label><br>
+            <h6 class="text-secondary">التخصص: </h6>
+            <asp:Label ID="lblspliz" runat="server" Text="Lable2"></asp:Label><br>
+            <h6 class="text-secondary">المعدل التراكمي: </h6>
+            <asp:Label ID="lblGPA" runat="server" Text="Label"></asp:Label><br>
+            <h6 class="text-secondary">التقدير: </h6>
+            <asp:Label ID="lblgrade" runat="server" Text="Label"></asp:Label><br>
+        </div>
+        <hr class="text-success">
+        <div class="div-service">
+            <div class="div-Home">
+                <a href="#aa" data-target="#show" data-toggle="collapse" class="cover">
+                    <div class="div-servece dropdown-toggle">
+                        <i class="fa-brands fa-servicestack"></i>
+                        <span>الخدمات المتاحة
+                        </span>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+        <div class="div-all-service collapse" aria-expanded="treu" id="show">
+            <a id="page1" href="/PagesStudent/Page_Student1.aspx">مقررات قمت بدراستها</a>
+            <a id="page2" href="/PagesStudent/Page_Student2.aspx">مقررات الترم الحالي</a>
+            <a id="page3" href="/PagesStudent/Page_Student3.aspx">تسجيل مقررات الترم الحالي</a>
+            <a id="page4" href="/PagesStudent/Page_Student4.aspx">مرشدي الاكاديمي</a>
+        </div>
+        <div class="div-Home mt-1">
+            <a href="#aa" data-target="#show2" data-toggle="collapse" class="cover">
+                <div class="div-servece dropdown-toggle">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>الاعدادت
+                    </span>
+                </div>
+            </a>
+        </div>
+        <div class="div-all-service collapse" id="show2">
+            <a id="page5" href="/PagesStudent/Page_Student5.aspx">الملف الشخصي</a>
+            <a id="page6" href="/PagesStudent/Page_Student6.aspx">تعديل كلمة المرور</a>
+            <a id="page7" href="/PagesStudent/Page_Student7.aspx">كيفية استخدام النظام</a>
+        </div>
+        <div class="div-Home mt-1">
+            <a href="#" data-toggle="collapse" class="cover">
+                <div class="div-servece">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>تسجيل خروج
+                    </span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!--End Dashboard-->
+    <!--Start Dashboard Mobile-->
+
+    <!--End Dashboard Mobile-->
+
+
+    <!--start Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+        <div class="container-fluid">
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="d-flex">
+                    <a href="../PagesStudent/Dashboard_Student.aspx"><i class="fa fa-home Home-Page" aria-hidden="true"></i></a>                    
+                    <input class="form-control me-2" type="search" placeholder="بحــــث" aria-label="Search">
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!--End Navbar-->
+
+    <div class="div-body">
+        <div class="div-title shedow">
+            <h4 class="text-dark">نظام الكتروني لتسجيل المواد الدراسية</h4>
+            <p>
+                مرحبــــــــــا بك
+                <asp:Label ID="lblNameStudent" class="text-success" runat="server" Text="Label"></asp:Label>
+            </p>
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <script src="../js/popper.min.js"></script>
+        <script src="../js/jquery-3.6.3.min.js"></script>
+        <script src="../js/all.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/js.js"></script>
+</body>
+</html>
